@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def module_list(request):
+    return render(request, 'k_admin/module_list.html', {})

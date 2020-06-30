@@ -3,5 +3,5 @@ from k_admin import views
 
 
 urlpatterns = [
-    path('', views.module_list, name='module_list'),
+    
 ]

@@ -1,9 +1,23 @@
-{% extends 'k_user/k_user_base.html'%}
+{% extends 'k_user/k_user_base.html' %}
 {% load static %}
+{% block title %}login_page{% endblock %}
+{% block content %}
+    <div class="container">
+        <h1>login</h1>
 
-{% block script%}
-{% endblock %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            user_id:
+            <br/>
+            <input name="username" type="text">
+            <br/>
+            password:
+            <br/>
+            <input name="password" type="password">
+            <br/><br/>
+            <input type="submit" class="btn btn-primary" value="login">
+        </form>
+        <p>{{error}}</p>
+    </div>
 
-{% block content%}
-    login page
 {% endblock %}

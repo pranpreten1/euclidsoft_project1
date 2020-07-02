@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'k_admin',
-    'k_user', 
+    'k_user',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+LOGIN_URL = '/accounts/login/'
+
+LOGIN_REDIRECT_URL = '/accounts/profile/'
+
+LOGOUT_REDIRECT_URL = None
